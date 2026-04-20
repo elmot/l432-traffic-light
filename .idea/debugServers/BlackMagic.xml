@@ -1,0 +1,14 @@
+<component name="DebugServers">
+  <generic-debug-target name="BlackMagic" uniqueID="2523d137-1ea8-4d72-a5a2-a0a9273768ca" selected="true">
+    <debugger version="1">
+      <debugger kind="GDB" isBundled="true" />
+      <env />
+    </debugger>
+    <gdbserver enabled="false">
+      <env />
+    </gdbserver>
+    <console port="4444" />
+    <target reset-command="bm_reset" reset-before="false" />
+    <connection use-custom-script="true" remote-string="com4" custom-script="echo Connecting to target...\n&#10;$GDBTargetCommand$&#10;monitor auto_scan&#10;attach 1&#10;echo Connected to target!\n&#10;set mem inaccessible-by-default off&#10;tb main&#10;&#10;define bm_reset&#10;  echo System reset by setting AIRCR.SYSRESETREQ bit\n&#10;  set {int}0xe000ed0c = 0x05FA0004&#10;end" />
+  </generic-debug-target>
+</component>
