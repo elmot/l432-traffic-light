@@ -29,6 +29,7 @@ In CLion, during a debug session open the **Peripherals** tab in the Debug tool 
 
 ## References
 
+* [CLion + probe-rs](https://github.com/elmot/g491-traffic-light-rs-probe)
 * CLion [Debug Servers](https://www.jetbrains.com/help/clion/debug-servers.html)
 * [Black Magic Probe](https://black-magic.org/)
 * CLion [Peripheral View](https://www.jetbrains.com/help/clion/peripheral-view.html)
